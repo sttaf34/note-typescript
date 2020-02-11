@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ts-node-this-file",
+      "type": "shell",
+      "command": "source ~/.bashrc && yarn ts-node '${file}'",
+      "windows": {
+        "command": "source ~/.bashrc && node_modules/.bin/ts-node '${file}'"
+      },
+    },
+    {
+      "label": "ts-node-dev-this-file",
+      "type": "shell",
+      "command": "source ~/.bashrc && yarn ts-node-dev '${file}'",
+      "windows": {
+        "command": "source ~/.bashrc && node_modules/.bin/ts-node-dev '${file}'"
+      },
+    },
+    {
+      "label": "jest-this-file",
+      "type": "shell",
+      "command": "source ~/.bashrc && yarn jest '${file}'",
+      "windows": {
+        "command": "source ~/.bashrc && yarn jest '${relativeFile}'"
+      },
+    },
+    {
+      // task で実行されるとき $PATH が違ってる
+      "label": "echo-path",
+      "type": "shell",
+      "command": "echo $PATH",
+    },
+    {
+      "label": "tsc",
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": [
+        "$tsc"
+      ]
+    }
+  ]
+}
