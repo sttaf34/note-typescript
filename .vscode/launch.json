@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "preLaunchTask": "tsc",
-      "program": "${workspaceFolder}/src/${fileBasenameNoExtension}.ts",
+      "program": "${file}",
       "smartStep": true,
       "outFiles": [
         "${workspaceRoot}/build/**/*.js"
