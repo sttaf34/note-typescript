@@ -4,32 +4,20 @@
     {
       "label": "ts-node-this-file",
       "type": "shell",
-      "command": "source ~/.bashrc && yarn ts-node '${file}'",
-      "windows": {
-        "command": "source ~/.bashrc && node_modules/.bin/ts-node '${file}'"
-      },
+      "command": "yarn ts-node '${file}'"
     },
     {
       "label": "ts-node-dev-this-file",
       "type": "shell",
-      "command": "source ~/.bashrc && yarn ts-node-dev '${file}'",
-      "windows": {
-        "command": "source ~/.bashrc && node_modules/.bin/ts-node-dev '${file}'"
-      },
+      "command": "yarn ts-node-dev '${file}'"
     },
     {
       "label": "jest-this-file",
       "type": "shell",
-      "command": "source ~/.bashrc && yarn jest '${file}'",
+      "command": "yarn jest '${file}'",
       "windows": {
-        "command": "source ~/.bashrc && yarn jest '${relativeFile}'"
+        "command": "echo '現状動かない'"
       },
-    },
-    {
-      // task で実行されるとき $PATH が違ってる
-      "label": "echo-path",
-      "type": "shell",
-      "command": "echo $PATH",
     },
     {
       "label": "tsc",

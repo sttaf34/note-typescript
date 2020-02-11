@@ -5,7 +5,7 @@ const listener = (
   request: http.IncomingMessage,
   response: http.ServerResponse
 ): void => {
-  if (request.url === undefined || request.url === "/service-worker.js") {
+  if (request.url === undefined || request.url === "/favicon.ico") {
     response.end("")
     return
   }
@@ -17,6 +17,8 @@ const listener = (
   // { key: '123', age: '38' } とオブジェクトで取れる
   console.log(request.url)
   console.log(object)
+  console.log("")
+  response.end("")
 }
 
 const port = 5100
