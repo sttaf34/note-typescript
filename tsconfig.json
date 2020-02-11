@@ -1,16 +1,23 @@
+// https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+// https://qiita.com/ryokkkke/items/390647a7c26933940470
+// https://qiita.com/alfas/items/539ade65926deb530e0e
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./build/",
-    "strictNullChecks": true
+    "target": "es2015",       // JSへの変換時にどのバージョンにするか
+    "sourceMap": true,        // デバッガ等で利用する.mapを出力するか否か
+    "outDir": "./build/",     // JSへの変換したファイルの出力先
+    "strictNullChecks": true, // ヌルチェックを厳密に
+    "strict": true,           // 型チェックを厳密に
   },
-  "strict": true,
+
+  // 変換対象ファイル指定
   "include": [
     "**/src/**/*.ts",
     "**/__tests__/**/*.ts"
   ],
+
+  // 変換対象ファイル除外指定
   "exclude": [
     "node_modules"
   ]
