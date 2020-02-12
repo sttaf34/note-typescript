@@ -1,0 +1,15 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    title enquete
+  body
+    h1 Which do you eat?
+    form(method="post" action="/enquetes/yaki-shabu")
+      span name:
+      input(type="text" name="name")
+      input(type="radio" name="yaki-shabu" value="beef")
+      span beef
+      input(type="radio" name="yaki-shabu" value="chicken")
+      span chicken
+      button(type="submit") submit
