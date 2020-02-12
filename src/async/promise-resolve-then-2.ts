@@ -12,7 +12,7 @@ simplePromise().then((): void => {
 })
 
 // Promiseを返す関数を使った形
-const samplePromise = (): Promise<void> => {
+const samplePromiseA = (): Promise<void> => {
   return new Promise((resolve: () => void): void => {
     // 通信して2秒後に成功となったというイメージ
     setTimeout((): void => {
@@ -21,6 +21,31 @@ const samplePromise = (): Promise<void> => {
   })
 }
 console.log("Hello...")
-samplePromise().then((): void => {
+samplePromiseA().then((): void => {
   console.log("Sample!")
 })
+
+// Promise で何か値が返ってくる場合の書き方
+const samplePromiseB = (): Promise<number> => {
+  return new Promise((resolve: (aNumber: number) => void): void => {
+    resolve(1000)
+  })
+}
+console.log("Hello...")
+samplePromiseB().then((aNumber: number): void => {
+  console.log(aNumber)
+})
+
+// Promise で何か値が返ってくる場合の書き方で、
+// resolve のところの型省略して大丈夫そう
+const samplePromiseC = (): Promise<number> => {
+  return new Promise((resolve): void => {
+    resolve(2000)
+  })
+}
+console.log("Hello...")
+samplePromiseC().then((aNumber: number): void => {
+  console.log(aNumber)
+})
+
+export {}
