@@ -11,10 +11,16 @@ class User implements UserInterface {
 
   public age = 24
 
+  // new User("Bob", 32) でインスタンス化するときに呼ばれる
+  constructor(name: string, age: number) {
+    this.name = name
+    this.age = age
+  }
+
   public getName = (): string => {
     return this.name
   }
 }
 
-const user = new User()
+const user = new User("Bob", 32)
 console.log(user.getName())

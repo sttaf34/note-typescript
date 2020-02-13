@@ -33,3 +33,10 @@ const stringD = (): void => {
   console.log(secondHalf)
 }
 stringD()
+
+// インデックスで取得
+const stringE = (): void => {
+  const textA = "pineapple"
+  console.log(textA[2])
+}
+stringE()
