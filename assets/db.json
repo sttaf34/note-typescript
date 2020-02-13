@@ -1,0 +1,509 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Waxbill, violet-eared",
+      "age": 75
+    },
+    {
+      "id": 2,
+      "name": "Whale, southern right",
+      "age": 91
+    },
+    {
+      "id": 3,
+      "name": "Guanaco",
+      "age": 45
+    },
+    {
+      "id": 4,
+      "name": "Fox, grey",
+      "age": 60
+    },
+    {
+      "id": 5,
+      "name": "Gull, lava",
+      "age": 68
+    },
+    {
+      "id": 6,
+      "name": "Dragon, komodo",
+      "age": 36
+    },
+    {
+      "id": 7,
+      "name": "Squirrel, malabar",
+      "age": 46
+    },
+    {
+      "id": 8,
+      "name": "Turtle (unidentified)",
+      "age": 26
+    },
+    {
+      "id": 9,
+      "name": "Mynah, common",
+      "age": 25
+    },
+    {
+      "id": 10,
+      "name": "Echidna, short-beaked",
+      "age": 50
+    },
+    {
+      "id": 11,
+      "name": "Lappet-faced vulture",
+      "age": 18
+    },
+    {
+      "id": 12,
+      "name": "American marten",
+      "age": 77
+    },
+    {
+      "id": 13,
+      "name": "Gulls (unidentified)",
+      "age": 68
+    },
+    {
+      "id": 14,
+      "name": "Buffalo, african",
+      "age": 77
+    },
+    {
+      "id": 15,
+      "name": "Kangaroo, brush-tailed rat",
+      "age": 11
+    },
+    {
+      "id": 16,
+      "name": "European wild cat",
+      "age": 53
+    },
+    {
+      "id": 17,
+      "name": "Malagasy ground boa",
+      "age": 26
+    },
+    {
+      "id": 18,
+      "name": "Antelope ground squirrel",
+      "age": 100
+    },
+    {
+      "id": 19,
+      "name": "Golden brush-tailed possum",
+      "age": 33
+    },
+    {
+      "id": 20,
+      "name": "Galapagos hawk",
+      "age": 44
+    },
+    {
+      "id": 21,
+      "name": "Southern tamandua",
+      "age": 78
+    },
+    {
+      "id": 22,
+      "name": "Galapagos dove",
+      "age": 43
+    },
+    {
+      "id": 23,
+      "name": "Rose-ringed parakeet",
+      "age": 57
+    },
+    {
+      "id": 24,
+      "name": "Elephant, asian",
+      "age": 46
+    },
+    {
+      "id": 25,
+      "name": "Sloth, hoffman's",
+      "age": 51
+    },
+    {
+      "id": 26,
+      "name": "Jaguarundi",
+      "age": 99
+    },
+    {
+      "id": 27,
+      "name": "Asian red fox",
+      "age": 55
+    },
+    {
+      "id": 28,
+      "name": "Caribou",
+      "age": 5
+    },
+    {
+      "id": 29,
+      "name": "Crested bunting",
+      "age": 12
+    },
+    {
+      "id": 30,
+      "name": "Timber wolf",
+      "age": 14
+    },
+    {
+      "id": 31,
+      "name": "Goanna lizard",
+      "age": 74
+    },
+    {
+      "id": 32,
+      "name": "South American puma",
+      "age": 31
+    },
+    {
+      "id": 33,
+      "name": "Pine siskin",
+      "age": 17
+    },
+    {
+      "id": 34,
+      "name": "Penguin, magellanic",
+      "age": 83
+    },
+    {
+      "id": 35,
+      "name": "Waxbill, black-cheeked",
+      "age": 40
+    },
+    {
+      "id": 36,
+      "name": "Mule deer",
+      "age": 11
+    },
+    {
+      "id": 37,
+      "name": "Black bear",
+      "age": 83
+    },
+    {
+      "id": 38,
+      "name": "European red squirrel",
+      "age": 71
+    },
+    {
+      "id": 39,
+      "name": "Bushbaby, large-eared",
+      "age": 85
+    },
+    {
+      "id": 40,
+      "name": "Smith's bush squirrel",
+      "age": 96
+    },
+    {
+      "id": 41,
+      "name": "Skink, african",
+      "age": 27
+    },
+    {
+      "id": 42,
+      "name": "Greater adjutant stork",
+      "age": 83
+    },
+    {
+      "id": 43,
+      "name": "Gaur",
+      "age": 32
+    },
+    {
+      "id": 44,
+      "name": "Woodpecker, red-headed",
+      "age": 6
+    },
+    {
+      "id": 45,
+      "name": "Crab-eating raccoon",
+      "age": 75
+    },
+    {
+      "id": 46,
+      "name": "Goldeneye, barrows",
+      "age": 55
+    },
+    {
+      "id": 47,
+      "name": "Pied kingfisher",
+      "age": 98
+    },
+    {
+      "id": 48,
+      "name": "Agama lizard (unidentified)",
+      "age": 4
+    },
+    {
+      "id": 49,
+      "name": "Phalarope, red",
+      "age": 62
+    },
+    {
+      "id": 50,
+      "name": "Curlew, black",
+      "age": 52
+    },
+    {
+      "id": 51,
+      "name": "Galapagos albatross",
+      "age": 89
+    },
+    {
+      "id": 52,
+      "name": "Yellow-bellied marmot",
+      "age": 94
+    },
+    {
+      "id": 53,
+      "name": "Baleen whale",
+      "age": 43
+    },
+    {
+      "id": 54,
+      "name": "Common wallaroo",
+      "age": 66
+    },
+    {
+      "id": 55,
+      "name": "Steller's sea lion",
+      "age": 75
+    },
+    {
+      "id": 56,
+      "name": "Crow, pied",
+      "age": 63
+    },
+    {
+      "id": 57,
+      "name": "Impala",
+      "age": 30
+    },
+    {
+      "id": 58,
+      "name": "Vulture, bengal",
+      "age": 77
+    },
+    {
+      "id": 59,
+      "name": "Sloth, hoffman's",
+      "age": 75
+    },
+    {
+      "id": 60,
+      "name": "Eurasian hoopoe",
+      "age": 11
+    },
+    {
+      "id": 61,
+      "name": "American racer",
+      "age": 18
+    },
+    {
+      "id": 62,
+      "name": "Arctic ground squirrel",
+      "age": 99
+    },
+    {
+      "id": 63,
+      "name": "North American beaver",
+      "age": 20
+    },
+    {
+      "id": 64,
+      "name": "Asian foreset tortoise",
+      "age": 77
+    },
+    {
+      "id": 65,
+      "name": "American badger",
+      "age": 29
+    },
+    {
+      "id": 66,
+      "name": "Capybara",
+      "age": 8
+    },
+    {
+      "id": 67,
+      "name": "Peccary, collared",
+      "age": 27
+    },
+    {
+      "id": 68,
+      "name": "Honey badger",
+      "age": 93
+    },
+    {
+      "id": 69,
+      "name": "Sambar",
+      "age": 30
+    },
+    {
+      "id": 70,
+      "name": "Oribi",
+      "age": 66
+    },
+    {
+      "id": 71,
+      "name": "Dog, black-tailed prairie",
+      "age": 97
+    },
+    {
+      "id": 72,
+      "name": "Vulture, egyptian",
+      "age": 94
+    },
+    {
+      "id": 73,
+      "name": "Pied cormorant",
+      "age": 79
+    },
+    {
+      "id": 74,
+      "name": "Common turkey",
+      "age": 7
+    },
+    {
+      "id": 75,
+      "name": "Impala",
+      "age": 43
+    },
+    {
+      "id": 76,
+      "name": "Bontebok",
+      "age": 5
+    },
+    {
+      "id": 77,
+      "name": "Wallaby, bennett's",
+      "age": 60
+    },
+    {
+      "id": 78,
+      "name": "Butterfly, canadian tiger swallowtail",
+      "age": 85
+    },
+    {
+      "id": 79,
+      "name": "Spoonbill, white",
+      "age": 15
+    },
+    {
+      "id": 80,
+      "name": "Mexican boa",
+      "age": 95
+    },
+    {
+      "id": 81,
+      "name": "Gila monster",
+      "age": 93
+    },
+    {
+      "id": 82,
+      "name": "Long-nosed bandicoot",
+      "age": 53
+    },
+    {
+      "id": 83,
+      "name": "Camel, dromedary",
+      "age": 67
+    },
+    {
+      "id": 84,
+      "name": "Burrowing owl",
+      "age": 77
+    },
+    {
+      "id": 85,
+      "name": "Cardinal, black-throated",
+      "age": 49
+    },
+    {
+      "id": 86,
+      "name": "Rat, white-faced tree",
+      "age": 71
+    },
+    {
+      "id": 87,
+      "name": "Bird, secretary",
+      "age": 11
+    },
+    {
+      "id": 88,
+      "name": "Insect, stick",
+      "age": 65
+    },
+    {
+      "id": 89,
+      "name": "Red-tailed phascogale",
+      "age": 59
+    },
+    {
+      "id": 90,
+      "name": "Peacock, indian",
+      "age": 33
+    },
+    {
+      "id": 91,
+      "name": "Pintail, white-cheeked",
+      "age": 25
+    },
+    {
+      "id": 92,
+      "name": "Violet-crested turaco",
+      "age": 60
+    },
+    {
+      "id": 93,
+      "name": "Pampa gray fox",
+      "age": 66
+    },
+    {
+      "id": 94,
+      "name": "Gull, swallow-tail",
+      "age": 26
+    },
+    {
+      "id": 95,
+      "name": "Hawk-headed parrot",
+      "age": 41
+    },
+    {
+      "id": 96,
+      "name": "Agile wallaby",
+      "age": 85
+    },
+    {
+      "id": 97,
+      "name": "Black-capped capuchin",
+      "age": 24
+    },
+    {
+      "id": 98,
+      "name": "Nighthawk, common",
+      "age": 74
+    },
+    {
+      "id": 99,
+      "name": "Dabchick",
+      "age": 35
+    },
+    {
+      "id": 100,
+      "name": "Cormorant, large",
+      "age": 10
+    },
+    {
+      "name": "human",
+      "age": "38",
+      "id": 101
+    }
+  ]
+}
