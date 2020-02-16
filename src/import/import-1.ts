@@ -8,3 +8,4 @@ console.log(getHeightHeight())
 // import {  } from "./export-2"
 //         ↑
 // ここで「＾ + Space」押すと export 候補が出てくる
+// Mac だと Spotlight に取られてしまっているので、「⌥ + Space」にしてる

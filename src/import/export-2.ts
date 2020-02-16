@@ -24,3 +24,5 @@ const getHeight = (): number => {
   return height
 }
 export default getHeight
+
+export const user = new User("sttaf34")

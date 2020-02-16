@@ -5,7 +5,7 @@ import getHeightFrom2, * as Something from "./export-2"
 console.log(width)
 console.log(getWidth())
 
-const user = new User("Michael Tomioka")
+const user = new User("sttaf34")
 console.log(user.getName())
 console.log(getHeight())
 
