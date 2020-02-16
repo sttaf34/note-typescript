@@ -7,24 +7,6 @@ const words = ["apple", "plum", "orange", "pineapple", "x", "by", "hat"]
 const result: boolean = words.includes("orange")
 console.log(`includes => ${result}`)
 
-// map でそれぞれの要素を大文字化
-const upperWords: string[] = words.map((word: string): string => {
-  return word.toUpperCase()
-})
-console.log(`map => ${upperWords}`)
-
-// find は要素の検索、最初に見つかった一個を返す
-const apple: string | undefined = words.find((word: string): boolean => {
-  return word.includes("app")
-})
-console.log(`find => ${apple}`)
-
-// filter は該当する要素を配列で返す
-const apples: string[] = words.filter((word: string): boolean => {
-  return word.includes("apple")
-})
-console.log(`filter => ${apples}`)
-
 // concat で配列の連結
 const newWords: string[] = ["cat", "dog", "bird"]
 const manyWords = words.concat(newWords)
