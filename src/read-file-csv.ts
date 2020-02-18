@@ -1,8 +1,6 @@
 import { join } from "path"
 import { readFileSync } from "fs"
 
-// ↑のような import で書くようにしたいがいろいろある、理解してない
-// https://qiita.com/sakymark/items/601b9ba4c5ff9a2d51e8
 import csvSync = require("csv-parse/lib/sync")
 
 const expandTilde = (filePath: string): string => {
