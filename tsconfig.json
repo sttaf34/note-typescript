@@ -3,7 +3,7 @@
 // https://qiita.com/alfas/items/539ade65926deb530e0e
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "commonjs",     // JSへの変換時にどのような規格でexportするか
     "target": "es2015",       // JSへの変換時にどのバージョンにするか
     "sourceMap": true,        // デバッガ等で利用する.mapを出力するか否か
     "outDir": "./build/",     // JSへの変換したファイルの出力先
