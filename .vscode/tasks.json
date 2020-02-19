@@ -21,8 +21,8 @@
     },
     {
       "label": "tsc",
-      "type": "typescript",
-      "tsconfig": "tsconfig.json",
+      "type": "shell",
+      "command": "yarn tsc -p .",
       "problemMatcher": [
         "$tsc"
       ]
