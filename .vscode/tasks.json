@@ -4,7 +4,12 @@
     {
       "label": "ts-node-this-file",
       "type": "shell",
-      "command": "yarn ts-node '${file}'"
+      "command": "yarn ts-node '${file}'",
+
+      // Windows で Selenium 関連を動くようにする対応
+      "windows": {
+        "command": "source ~/.bashrc && yarn ts-node '${file}'"
+      },
     },
     {
       "label": "ts-node-dev-this-file",
