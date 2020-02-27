@@ -17,6 +17,16 @@ class Driver {
     console.log("text -> ", text)
   }
 
+  private isFound = async (xpath: string): Promise<boolean> => {
+    const elements = await this.driver.findElements({ xpath })
+    return new Promise((resolve): void => {
+      resolve(elements.length > 0)
+    })
+
+    // findElement で存在しない selector を指定すると例外が発生する
+    // await this.driver.findElement({ xpath: "/html/body/pre/pre/pre" })
+  }
+
   // いろんな xpath の指定の仕方
   // 取れるかどうかの試行錯誤は、Chrome DevTools > Console で
   // $x("//*[@id='p-namespaces-label']") とかすると良い
@@ -59,9 +69,13 @@ class Driver {
     console.log("text -> ", aText)
 
     // 階層上
-    const div = await p.findElement({ xpath: "../../div" })
-    const divText = await div.getAttribute("innerHTML")
-    console.log("text -> ", divText)
+    const h1 = await p.findElement({ xpath: "../../div/h1" })
+    const h1Text = await h1.getAttribute("innerHTML")
+    console.log("text -> ", h1Text)
+
+    // 存在判定
+    const isFound = await this.isFound("/html/body/div/p[222]")
+    console.log("isFound -> ", isFound)
   }
 
   public main = async (): Promise<void> => {
