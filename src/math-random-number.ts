@@ -1,7 +1,10 @@
-// 0 - 1 のランダムな小数
+// 0 以上 1 未満のランダムな小数
 console.log(Math.random())
 
-// 0 - 100 のランダムな整数
+// Math.floor -> 引数の数以下の最大の整数を返す
+console.log(Math.floor(99.8)) // 99
+
+// 0 - 99 のランダムな整数
 const randomNumber = Math.floor(Math.random() * 100)
 console.log(randomNumber)
 
