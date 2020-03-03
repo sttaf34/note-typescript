@@ -24,3 +24,8 @@ console.log("\n余り")
 console.log(9 % 3) // 0
 console.log(9.0 % 3) // 0
 console.log(9.5 % 3) // 0.5 小数点以下の余りも計算してくれる
+
+// 整数判定
+console.log("\n整数判定")
+console.log(Number.isInteger(1.1)) // false
+console.log(Number.isInteger(0.0)) // true
