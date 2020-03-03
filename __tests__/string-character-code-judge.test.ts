@@ -1,4 +1,4 @@
-import * as judge from "../src/basic/string-character-code-judge"
+import * as judge from "../src/string/string-character-code-judge"
 
 test("isHiragana", (): void => {
   expect(judge.isHiragana("ぁぃいうえお")).toBe(true)

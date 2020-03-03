@@ -12,6 +12,7 @@ console.log(33 ** 13) // 55040353993448505000 になる
 console.log(new Big(33).pow(13).toString()) // 55040353993448503713 で正しい
 
 // RSA の暗号化と復号
+// なんでここに書いてるかと言うと、大きい整数を扱う必要があるから
 // ~/Projects/note/text/encryption_rsa.md
 const plain = 33
 const e = 13
