@@ -73,6 +73,11 @@ class Driver {
     const h1Text = await h1.getAttribute("innerHTML")
     console.log("text -> ", h1Text)
 
+    // 階層上をタグ名指定なしで
+    const div = await p.findElement({ xpath: ".." })
+    const divText = await div.getAttribute("innerHTML")
+    console.log("text -> ", divText)
+
     // 存在判定
     const isFound = await this.isFound("/html/body/div/p[222]")
     console.log("isFound -> ", isFound)
@@ -80,7 +85,7 @@ class Driver {
 
   public main = async (): Promise<void> => {
     await this.setup()
-    await this.doSomethingOnWikipedia()
+    // await this.doSomethingOnWikipedia()
     await this.doSomethingOnExample()
   }
 }
