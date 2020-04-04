@@ -1,5 +1,7 @@
 // 空文字列を変換すると 0 になる
 console.log(Number("")) // 0
+console.log(Number("apple")) // NaN
+console.log(Number("123apple")) // NaN
 
 // これらの定数の型は、どちらもnumber
 const aInfiniy = Number.POSITIVE_INFINITY
