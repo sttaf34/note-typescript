@@ -11,9 +11,12 @@ class Driver {
     this.driver = await new Builder().withCapabilities(capabilities).build()
   }
 
-  private log = async (xpath: string): Promise<void> => {
+  private log = async (
+    xpath: string,
+    attribute = "innerHTML"
+  ): Promise<void> => {
     const element = await this.driver.findElement({ xpath })
-    const text = await element.getAttribute("innerHTML")
+    const text = await element.getAttribute(attribute)
     console.log("text -> ", text)
   }
 
@@ -41,6 +44,9 @@ class Driver {
 
     // class名の部分一致で取得
     await this.log("//h1[contains(@class, 'firstHead')]")
+
+    // name名の完全一致で取得
+    await this.log("//input[@name='search']", "title")
 
     // class名の完全一致、かつ、テキストの部分一致
     await this.log("//a[@class='mw-jump-link' and contains(text(), '検索')]")
