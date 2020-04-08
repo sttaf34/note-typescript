@@ -10,15 +10,14 @@ const getCapabilities = (): Capabilities => {
   return capabilities
 }
 
-// ファイルアップロードのフォームのサーバを起動しておいてから・・・
-// yarn ts-node ~/Projects/note-typescript/src/server/pug.ts => localhost:5000
-
+// フォームの書いてあるファイルをサーバ上で見られるようにしといて・・・
+// serve ~/Projects/note/htmlcss/input
 const main = async (): Promise<void> => {
   const driver = await new Builder().withCapabilities(getCapabilities()).build()
-  await driver.get("http://localhost:5000/")
+  await driver.get("http://localhost:5000/input-for-selenium")
 
   // 人間がダイアログを開いてファイル選択するのと同様の動作になる
-  const input = await driver.findElement({ xpath: "/html/body/form/input[2]" })
+  const input = await driver.findElement({ xpath: "//input[@name='file']" })
   input.sendKeys(expandTilde("~/Projects/note-typescript/assets/sample.csv"))
   sleep(10000)
 }
