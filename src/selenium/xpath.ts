@@ -51,6 +51,9 @@ class Driver {
     // class名の完全一致、かつ、テキストの部分一致
     await this.log("//a[@class='mw-jump-link' and contains(text(), '検索')]")
 
+    // テキストの完全一致
+    await this.log("//a[text()='検索に移動']")
+
     // ルートからたどって取得
     await this.log("/html/body/div[5]/div[1]/div[2]/div[1]/ul/li[2]/a")
   }
