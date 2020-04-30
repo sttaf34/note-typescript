@@ -1,20 +1,5 @@
-import { join } from "path"
 import * as fs from "fs"
-
-const expandTilde = (filePath: string): string => {
-  if (filePath[0] === "~" && typeof process.env.HOME === "string") {
-    return join(process.env.HOME, filePath.slice(1))
-  }
-  return filePath
-}
-
-const sleep = async (milliseconds: number): Promise<void> => {
-  return new Promise((resolve: () => void): void => {
-    setTimeout((): void => {
-      resolve()
-    }, milliseconds)
-  })
-}
+import { expandTilde, sleep } from "./useful-functions"
 
 // すべてのプロセスが持つべき3つのファイルディスクリプタ
 // 0 -> 標準入力

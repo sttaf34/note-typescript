@@ -1,12 +1,5 @@
-import * as path from "path"
 import { readFileSync, createReadStream } from "fs"
-
-const expandTilde = (filePath: string): string => {
-  if (filePath[0] === "~" && typeof process.env.HOME === "string") {
-    return path.join(process.env.HOME, filePath.slice(1))
-  }
-  return filePath
-}
+import { expandTilde } from "../useful-functions"
 
 // ダミーデータ作成サービスで作ったデータ
 const aPath = "~/Projects/note-typescript/assets/users.csv"
