@@ -32,6 +32,13 @@ class Driver {
     const scriptB = "document.getElementById('footer').remove();"
     await this.driver.executeScript(scriptB)
     await sleep(3 * 1000)
+
+    // アラートを出現、フォーカス、OKする
+    const scriptC = "window.alert('こんにちは');"
+    await this.driver.executeScript(scriptC)
+    const alert = await this.driver.switchTo().alert()
+    await alert.accept()
+    await sleep(3 * 1000)
   }
 
   public main = async (): Promise<void> => {
