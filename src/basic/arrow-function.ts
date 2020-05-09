@@ -27,18 +27,18 @@ console.log(functionD(88))
 // aNumber => aNumber * 2
 // 引数    => 処理
 const numbers = Array<number>(8).fill(100)
-const resultA = numbers.map(aNumber => aNumber * 2)
+const resultA = numbers.map((aNumber) => aNumber * 2)
 console.log(resultA)
 
 // map 等の中で使う場合で処理が複数行になる場合は、波括弧は省略できない
-const resultB = numbers.map(aNumber => {
+const resultB = numbers.map((aNumber) => {
   const tempNumber = aNumber * 2
   return tempNumber * 3
 })
 console.log(resultB)
 
 // map 等の中でも、波括弧省略でオブジェクトを返すときは () で囲む
-const resultC = numbers.map(aNumber => ({ id: aNumber }))
+const resultC = numbers.map((aNumber) => ({ id: aNumber }))
 console.log(resultC)
 
 interface User {
