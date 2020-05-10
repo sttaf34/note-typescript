@@ -1,3 +1,7 @@
+//
+// Arrayの初期化
+//
+
 // 要素数だけを指定しての初期化
 const numbersA = Array<number>(5)
 
@@ -21,6 +25,10 @@ console.log(numbersB)
 // 各要素が undefined な Array を生成
 const numbersC = Array.from({ length: 5 })
 console.log(numbersC)
+
+//
+// Array.from に関数を渡しての初期化
+//
 
 // Array.from に関数を渡して生成
 const numbersD = Array.from({ length: 5 }, () => 300)
