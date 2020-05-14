@@ -28,14 +28,24 @@ class Driver {
     await this.driver.executeScript(scriptA)
     await sleep(3 * 1000)
 
-    // 要素を除去
-    const scriptB = "document.getElementById('footer').remove();"
+    // 上がより見える方向にスクロール
+    const scriptB = "window.scrollBy(0, -500);"
     await this.driver.executeScript(scriptB)
     await sleep(3 * 1000)
 
-    // アラートを出現、フォーカス、OKする
-    const scriptC = "window.alert('こんにちは');"
+    // 下がより見える方向にスクロール
+    const scriptC = "window.scrollBy(0, 500);"
     await this.driver.executeScript(scriptC)
+    await sleep(3 * 1000)
+
+    // 要素を除去
+    const scriptD = "document.getElementById('footer').remove();"
+    await this.driver.executeScript(scriptD)
+    await sleep(3 * 1000)
+
+    // アラートを出現、フォーカス、OKする
+    const scriptE = "window.alert('こんにちは');"
+    await this.driver.executeScript(scriptE)
     const alert = await this.driver.switchTo().alert()
     await alert.accept()
     await sleep(3 * 1000)
