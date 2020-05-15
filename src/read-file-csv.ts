@@ -1,9 +1,7 @@
 import * as parse from "csv-parse"
 
-import { readFileSync, createReadStream } from "fs"
+import { createReadStream } from "fs"
 import { expandTilde } from "./useful-functions"
-
-import csvSync = require("csv-parse/lib/sync")
 
 // ファイルから一定量読みつつ、読んだ分から CSV のパーサーに渡している形
 {
@@ -23,12 +21,4 @@ import csvSync = require("csv-parse/lib/sync")
   parse(csvString, (error, records) => {
     console.log(records)
   })
-}
-
-// 同期的に読み込んでいる形
-{
-  const aPath = "~/Projects/note-typescript/assets/sample.csv"
-  const data = readFileSync(expandTilde(aPath))
-  const fruitData = csvSync(data, { columns: true })
-  console.log(fruitData)
 }
