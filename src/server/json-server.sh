@@ -1,4 +1,5 @@
 # https://github.com/typicode/json-server
+# json を DB として REST なサーバを起動できる！
 
 # サーバ起動しといて……
 cd ~/Projects/note-typescript && yarn db
@@ -13,3 +14,9 @@ curl -X POST http://localhost:23306/animals/ -d 'name=human&age=38'
 # HTTPレスポンスを確認してみると
 # Content-Type: application/json; charset=utf-8
 curl -I GET http://localhost:23306/animals
+
+# 変更
+curl -X PATCH http://localhost:23306/animals/101 -d 'name=human&age=99'
+
+# 削除
+curl -X DELETE http://localhost:23306/animals/22
