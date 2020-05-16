@@ -7,8 +7,10 @@
     "target": "es2015",       // JSへの変換時にどのバージョンにするか
     "sourceMap": true,        // デバッガ等で利用する.mapを出力するか否か
     "outDir": "./build/",     // JSへの変換したファイルの出力先
-    "strictNullChecks": true, // ヌルチェックを厳密に
-    "strict": true,           // 型チェックを厳密に
+    "strict": true,           // 幾つかのオプションをtrueにする、厳しくなる
+
+    // ファイル名の大文字小文字の違いをエラーにする
+    "forceConsistentCasingInFileNames": true, 
   },
 
   // 変換対象ファイル指定
