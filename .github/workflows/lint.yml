@@ -13,6 +13,6 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12.14.0'
-      run: |
+    - run: |
           yarn install
           yarn eslint
