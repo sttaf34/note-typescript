@@ -15,4 +15,4 @@ jobs:
         node-version: '12.14.0'
     - run: |
           yarn install
-          yarn eslint
+          yarn lint
