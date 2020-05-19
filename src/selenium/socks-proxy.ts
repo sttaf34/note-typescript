@@ -9,8 +9,8 @@ const getCapabilities = (): Capabilities => {
       `--no-sandbox`,
       `--disable-gpu`,
       `--window-size=800,600`,
-      `--proxy-server=socks://localhost:10080`
-    ]
+      `--proxy-server=socks://localhost:10080`,
+    ],
   })
   return capabilities
 }

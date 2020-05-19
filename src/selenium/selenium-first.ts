@@ -7,8 +7,8 @@ const getCapabilities = (): Capabilities => {
       // '--headless',
       "--no-sandbox",
       "--disable-gpu",
-      `--window-size=800,600`
-    ]
+      `--window-size=800,600`,
+    ],
   })
   return capabilities
 }

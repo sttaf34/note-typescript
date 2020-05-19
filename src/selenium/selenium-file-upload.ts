@@ -5,7 +5,7 @@ import { expandTilde, sleep } from "../useful-functions"
 const getCapabilities = (): Capabilities => {
   const capabilities = Capabilities.chrome()
   capabilities.set("chromeOptions", {
-    args: ["--no-sandbox", "--disable-gpu", `--window-size=800,600`]
+    args: ["--no-sandbox", "--disable-gpu", `--window-size=800,600`],
   })
   return capabilities
 }
