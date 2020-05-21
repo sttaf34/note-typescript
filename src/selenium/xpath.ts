@@ -33,6 +33,7 @@ class Driver {
   // いろんな xpath の指定の仕方
   // 取れるかどうかの試行錯誤は、Chrome DevTools > Console で
   // $x("//*[@id='p-namespaces-label']") とかすると良い
+  // https://ja.wikipedia.org/ の HTML が変わると動かなくなる
   private doSomethingOnWikipedia = async (): Promise<void> => {
     await this.driver.get("https://ja.wikipedia.org/")
 
@@ -56,6 +57,12 @@ class Driver {
 
     // ルートからたどって取得
     await this.log("/html/body/div[5]/div[1]/div[2]/div[1]/ul/li[2]/a")
+
+    // 兄弟要素の最後を取得
+    await this.log("//div[@id='mf-tfa']/ul/li[last()]")
+
+    // 兄弟要素の先頭を取得
+    await this.log("//div[@id='mf-tfa']/ul/li[1]")
   }
 
   private doSomethingOnExample = async (): Promise<void> => {
@@ -94,8 +101,8 @@ class Driver {
 
   public main = async (): Promise<void> => {
     await this.setup()
-    // await this.doSomethingOnWikipedia()
-    await this.doSomethingOnExample()
+    await this.doSomethingOnWikipedia()
+    // await this.doSomethingOnExample()
   }
 }
 
