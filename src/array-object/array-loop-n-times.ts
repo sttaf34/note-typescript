@@ -12,7 +12,7 @@ console.log(hours)
 hours.forEach(() => console.log("hour"))
 
 // インデックスを使ってみる
-hours.forEach(index => console.log(index))
+hours.forEach((index) => console.log(index))
 
 // 回数指定での繰り返し処理の別の書き方
 Array.from({ length: 3 }).forEach(() => {

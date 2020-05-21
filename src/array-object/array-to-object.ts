@@ -1,7 +1,7 @@
 // 配列から各要素をキーにしてのオブジェクト化
 const fruits = ["apple", "orange", "grape"]
 const data: { [key: string]: string } = {}
-fruits.forEach(fruit => {
+fruits.forEach((fruit) => {
   data[fruit] = ""
 })
 console.log(data)

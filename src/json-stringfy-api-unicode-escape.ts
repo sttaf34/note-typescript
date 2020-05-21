@@ -23,7 +23,7 @@ console.log(JSON.stringify(objectB))
 
 // ユニコードの特定範囲を指定してエスケープする
 const jsonEncodeA = (object: { [key: string]: string }): string => {
-  return JSON.stringify(object).replace(/[\u0080-\uFFFF]/g, match => {
+  return JSON.stringify(object).replace(/[\u0080-\uFFFF]/g, (match) => {
     const codeUnit = match.charCodeAt(0).toString(16)
     return `\\u${codeUnit.padStart(4, "0")}`
   })
@@ -35,7 +35,7 @@ console.log(jsonEncodeA(objectB))
 const jsonEncodeB = (object: { [key: string]: string }): string => {
   return JSON.stringify(object).replace(
     /[\u0026\u003C\u003E\u0080-\uFFFF]/g,
-    match => {
+    (match) => {
       const codeUnit = match.charCodeAt(0).toString(16)
       return `\\u${codeUnit.padStart(4, "0")}`
     }

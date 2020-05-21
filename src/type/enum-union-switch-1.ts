@@ -8,7 +8,7 @@ enum Direction {
   North = "North",
   South = "South",
   East = "East",
-  West = "West"
+  West = "West",
 }
 
 // enum の中身を増やして、この関数の中身も対応していない場合、警告してくれる
@@ -18,7 +18,7 @@ const createDirectionString = (direction: Direction): string => {
     [Direction.North]: "北！",
     [Direction.South]: "南！",
     [Direction.East]: "東！",
-    [Direction.West]: "西！"
+    [Direction.West]: "西！",
   })
 }
 
@@ -49,7 +49,7 @@ logColor("Apple")
 const Vegetable = {
   Okra: 1,
   Tomato: 2,
-  Pumpkin: 3
+  Pumpkin: 3,
 } as const
 type Vegetable = typeof Vegetable[keyof typeof Vegetable]
 

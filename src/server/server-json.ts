@@ -7,13 +7,13 @@ const listener = (
   switch (request.url) {
     case "/good": // 有効なJSONを返す
       response.writeHead(200, {
-        "Content-Type": "application/json; charset=utf-8"
+        "Content-Type": "application/json; charset=utf-8",
       })
       response.end('{"name": "apple", "isSweet": true}')
       return
     case "/bad": // 無効なJSONを返す
       response.writeHead(200, {
-        "Content-Type": "application/json; charset=utf-8"
+        "Content-Type": "application/json; charset=utf-8",
       })
       response.end('{"name": "japan", "isS": tru')
       return

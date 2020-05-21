@@ -6,7 +6,7 @@ const Direction = {
   North: "N",
   South: "S",
   East: "E",
-  West: "W"
+  West: "W",
 } as const
 type Direction = typeof Direction[keyof typeof Direction]
 

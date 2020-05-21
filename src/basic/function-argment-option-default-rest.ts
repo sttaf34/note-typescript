@@ -14,7 +14,7 @@ functionDefault("Default!")
 
 // 可変長引数
 const functionRest = (...numbers: number[]): void => {
-  const squaredNumbers = numbers.map(number => number * number)
+  const squaredNumbers = numbers.map((number) => number * number)
   console.log(squaredNumbers)
 }
 // 渡し方は functionRest([1, 2, 3]) ではない

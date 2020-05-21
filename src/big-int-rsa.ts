@@ -20,14 +20,8 @@ const n = 2987
 const d = 2197
 console.log(`平文 => ${plain}`)
 
-const cryptogram = new Big(plain)
-  .pow(e)
-  .mod(n)
-  .toString()
+const cryptogram = new Big(plain).pow(e).mod(n).toString()
 console.log(`暗号文 => ${cryptogram}`)
 
-const decryptedPlain = new Big(cryptogram)
-  .pow(d)
-  .mod(n)
-  .toString()
+const decryptedPlain = new Big(cryptogram).pow(d).mod(n).toString()
 console.log(`平文 => ${decryptedPlain}`)
