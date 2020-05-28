@@ -17,7 +17,7 @@ class Driver {
   ): Promise<void> => {
     const element = await this.driver.findElement({ xpath })
     const text = await element.getAttribute(attribute)
-    console.log("text -> ", text)
+    console.log("text -> ", text, "\n")
   }
 
   private isFound = async (xpath: string): Promise<boolean> => {
@@ -49,12 +49,6 @@ class Driver {
     // name名の完全一致で取得
     await this.log("//input[@name='search']", "title")
 
-    // class名の完全一致、かつ、テキストの部分一致
-    await this.log("//a[@class='mw-jump-link' and contains(text(), '検索')]")
-
-    // テキストの完全一致
-    await this.log("//a[text()='検索に移動']")
-
     // ルートからたどって取得
     await this.log("/html/body/div[5]/div[1]/div[2]/div[1]/ul/li[2]/a")
 
@@ -63,6 +57,19 @@ class Driver {
 
     // 兄弟要素の先頭を取得
     await this.log("//div[@id='mf-tfa']/ul/li[1]")
+  }
+
+  private doSomethingOnWikipediaText = async (): Promise<void> => {
+    await this.driver.get("https://ja.wikipedia.org/")
+
+    // class名の完全一致、かつ、テキストの部分一致
+    await this.log("//a[@class='mw-jump-link' and contains(text(), '検索')]")
+
+    // テキストの部分一致の否定
+    await this.log("//a[not(contains(text(), '検索'))]", "outerHTML")
+
+    // テキストの完全一致
+    await this.log("//a[text()='検索に移動']")
   }
 
   private doSomethingOnExample = async (): Promise<void> => {
@@ -102,6 +109,7 @@ class Driver {
   public main = async (): Promise<void> => {
     await this.setup()
     await this.doSomethingOnWikipedia()
+    // await this.doSomethingOnWikipediaText()
     // await this.doSomethingOnExample()
   }
 }
