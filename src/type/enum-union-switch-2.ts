@@ -29,6 +29,12 @@ const japaneseName = (direction: Direction): string => {
 }
 console.log(japaneseName(Direction.East))
 
+// 反復処理
+// eslint-disable-next-line no-restricted-syntax
+for (const direction of Object.values(Direction)) {
+  console.log(direction)
+}
+
 const logJapaneseName = (direction: Direction): void => {
   switch (direction) {
     case Direction.North:
