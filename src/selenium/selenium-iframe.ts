@@ -20,6 +20,17 @@ const main = async (): Promise<void> => {
   const text = await elementInFrame.getText()
   console.log(text)
 
+  // <iframe> の中を見ているので、外側の方は見れない、エラーになる
+  // const xpathOuter = "//input[@name='apple']"
+  // const elementOuter = await driver.findElement({ xpath: xpathOuter })
+  // await elementOuter.click()
+
+  // 外側の方を見るように戻せば良い
+  await driver.switchTo().defaultContent()
+  const xpathOuter = "//input[@name='apple']"
+  const elementOuter = await driver.findElement({ xpath: xpathOuter })
+  await elementOuter.click()
+
   sleep(10000)
 }
 main()
