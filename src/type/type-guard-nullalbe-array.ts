@@ -1,5 +1,6 @@
 // filter の処理で null を取り除いてるはずなのだが、
-// filter 後の numbers の型に null が含まれている
+// filter 後の numbersA の型には null が含まれている
+// 要素としては取り除かれているが、型としては取り除かれたことが認識されてない
 const nullAndNumbers = [3, 4, null, null, 100]
 const numbersA = nullAndNumbers.filter((number) => number !== null)
 console.log(numbersA)
