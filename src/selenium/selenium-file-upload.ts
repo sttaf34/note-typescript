@@ -1,19 +1,17 @@
 import { Capabilities, Builder } from "selenium-webdriver"
+import fetch from "node-fetch"
+import * as dayjs from "dayjs"
+import { createWriteStream } from "fs"
 
 import { expandTilde, sleep } from "../useful-functions"
 
-const getCapabilities = (): Capabilities => {
-  const capabilities = Capabilities.chrome()
-  capabilities.set("chromeOptions", {
-    args: ["--no-sandbox", "--disable-gpu", `--window-size=800,600`],
-  })
-  return capabilities
-}
-
-// フォームの書いてあるファイルをサーバ上で見られるようにしといて・・・
 // serve ~/Projects/note/htmlcss/input
-const main = async (): Promise<void> => {
-  const driver = await new Builder().withCapabilities(getCapabilities()).build()
+// フォームの書いてあるファイルをサーバ上で見られるようにしといて・・・
+
+// ローカルのファイルをセットする場合
+const mainA = async (): Promise<void> => {
+  const capabilities = Capabilities.chrome()
+  const driver = await new Builder().withCapabilities(capabilities).build()
   await driver.get("http://localhost:5000/input-for-selenium")
 
   // 人間がダイアログを開いてファイル選択するのと同様の動作になる
@@ -21,4 +19,27 @@ const main = async (): Promise<void> => {
   input.sendKeys(expandTilde("~/Projects/note-typescript/assets/sample.csv"))
   sleep(10000)
 }
-main()
+mainA()
+
+// インターネットからダウンロードしたファイルをセットする場合
+const mainB = async (): Promise<void> => {
+  const now = dayjs().format("YYYYMMDDHHmmss")
+  const response = await fetch("https://dummyimage.com/300")
+  const writeStream = createWriteStream(expandTilde(`~/Desktop/${now}.png`))
+  const stream = response.body.pipe(writeStream)
+
+  // ストリームの処理終了時の処理
+  stream.on("finish", async () => {
+    console.log("finish")
+    const capabilities = Capabilities.chrome()
+    const driver = await new Builder().withCapabilities(capabilities).build()
+    await driver.get("http://localhost:5000/input-for-selenium")
+
+    const input = await driver.findElement({ xpath: "//input[@name='file']" })
+    input.sendKeys(expandTilde(`~/Desktop/${now}.png`))
+    sleep(10000)
+  })
+}
+mainB()
+
+export {}
