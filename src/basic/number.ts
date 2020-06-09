@@ -1,5 +1,6 @@
 // 空文字列を変換すると 0 になる
 console.log(Number("")) // 0
+console.log(Number("-")) // NaN
 console.log(Number("apple")) // NaN
 console.log(Number("123apple")) // NaN
 
@@ -10,11 +11,11 @@ const aNaN = Number.NaN
 // 有限数か否かの判定
 // false -> Number.POSITIVE_INFINITY と Number.NaN
 // true  -> ↑以外
-console.log(Number.isFinite(aInfiniy))
-console.log(Number.isFinite(aNaN))
+console.log(Number.isFinite(aInfiniy)) // false
+console.log(Number.isFinite(aNaN)) // false
 
-console.log(Number.isFinite(5.5))
-console.log(Number.isFinite(Number("")))
+console.log(Number.isFinite(5.5)) // true
+console.log(Number.isFinite(Number(""))) // 0 になるので true
 
 // Math
 console.log("\nMath")
