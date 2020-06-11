@@ -1,15 +1,13 @@
 module.exports = {
   "env": {
     "es6": true,
-    "browser": true,
     "jest": true
   },
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    "prettier",
     "prettier/@typescript-eslint",
-    "prettier/react"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -19,21 +17,17 @@ module.exports = {
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".ts"]
       }
     },
-    "react": {
-      "version": "16.11"
-    }
   },
   "rules": {
     "no-console": "off",
-    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] } ],
     "prettier/prettier": ["error", { "semi": false } ],
 
     // https://stackoverflow.com/questions/59265981/typescript-eslint-missing-file-extension-ts-import-extensions
     "import/extensions": [
-      "error", "ignorePackages", { "ts": "never", "tsx": "never" }
+      "error", "ignorePackages", { "ts": "never" }
     ],
 
     // switch 内での列挙漏れチェック
