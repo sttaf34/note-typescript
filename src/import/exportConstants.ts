@@ -51,3 +51,17 @@ export const SizeD = {
     Height: 800,
   },
 } as const
+
+// 名前空間つきの関数
+// eslint-disable-next-line @typescript-eslint/no-namespace
+export namespace UtilityA {
+  export const add = (a: number, b: number): number => {
+    return a + b
+  }
+}
+
+export const UtilityB = {
+  add: (a: number, b: number): number => {
+    return a + b
+  },
+} as const

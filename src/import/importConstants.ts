@@ -1,4 +1,11 @@
-import { SizeA, SizeB, SizeC, SizeD } from "./exportConstants"
+import {
+  SizeA,
+  SizeB,
+  SizeC,
+  SizeD,
+  UtilityA,
+  UtilityB,
+} from "./exportConstants"
 
 // 型       => OK
 // 代入不可 => NG
@@ -29,3 +36,7 @@ console.log(SizeC.Large.Height)
 console.log(SizeD.Small.Width)
 console.log(SizeD.Large.Height)
 // SizeD.Small.Width = 777 // 警告される
+
+// おまけ
+console.log(UtilityA.add(333, 444))
+console.log(UtilityB.add(333, 444))
