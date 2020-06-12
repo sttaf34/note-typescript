@@ -7,6 +7,10 @@ const words = ["apple", "plum", "orange", "pineapple", "x", "by", "hat"]
 const result: boolean = words.includes("orange")
 console.log(`includes => ${result}`)
 
+// 検索してインデックスを取得
+const index = words.findIndex((word) => word === "by")
+console.log(`index => ${index}`)
+
 // concat で配列の連結
 const newWords: string[] = ["cat", "dog", "bird"]
 const manyWords = words.concat(newWords)
