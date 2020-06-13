@@ -1,13 +1,18 @@
-/* eslint-disable no-restricted-syntax */
-
 // オブジェクト生成
-const aDictionary: { [key: string]: string } = { keyA: "AAAA" }
-aDictionary.keyB = "BBBB"
-aDictionary.keyC = "CCCC"
+const aDictionary: { [key: string]: number } = { keyA: 33333 }
+aDictionary.keyB = 44444
+aDictionary.keyC = 55555
 
-const keyAndValues: [string, string][] = Object.entries(aDictionary)
-for (const [key, value] of keyAndValues) {
-  console.log(key, value)
-}
+// 値だけを配列にする
+const values = Object.values(aDictionary)
+values.forEach((value) => console.log(value))
+
+// キーだけを配列にする
+const keys = Object.keys(aDictionary)
+keys.forEach((key) => console.log(key))
+
+// キーと値の両方を配列にする
+const keyAndValues: [string, number][] = Object.entries(aDictionary)
+keyAndValues.forEach(([key, value]) => console.log(key, value))
 
 export {}
