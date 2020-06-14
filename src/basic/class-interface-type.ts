@@ -33,3 +33,5 @@ console.log(user.getName())
   const book: Book = { title: "すごい本", price: 1980 }
   console.log(book)
 }
+
+export {}
