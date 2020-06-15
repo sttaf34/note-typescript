@@ -1,5 +1,7 @@
 import { Capabilities, Builder } from "selenium-webdriver"
 
+// オプションの表がある
+// https://peter.sh/experiments/chromium-command-line-switches/
 const getCapabilities = (): Capabilities => {
   const capabilities = Capabilities.chrome()
   capabilities.set("chromeOptions", {
