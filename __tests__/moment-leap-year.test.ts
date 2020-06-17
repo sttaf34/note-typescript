@@ -1,4 +1,4 @@
-import isLeapYear from "../src/moment-leap-year"
+import isLeapYear from "../src/datetime/moment-leap-year"
 
 test("function isLeapYear", (): void => {
   expect(isLeapYear(2000.2)).toBe(false)
