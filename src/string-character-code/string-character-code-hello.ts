@@ -60,14 +60,16 @@
 // 多くの String のメソッドは Code Unit 単位で動作するとのこと
 // charCodeAtは引数インデックスの Code Unit を返す関数
 const textA = "ア"
-console.log(textA.charCodeAt(0).toString(16))
+console.log(textA.charCodeAt(0).toString(16)) // 30a2 <= UTF-16 Code Unit
 
 // ↑の表にあるように「𦈢」は4バイト文字なので、以下のように動作する
 // Code Unit を丸ごと返してくれるわけはない
 const textB = "𦈢"
-console.log(textB.charCodeAt(0).toString(16))
-console.log(textB.charCodeAt(1).toString(16))
+console.log(textB.charCodeAt(0).toString(16)) // d858 <= UTF-16 Code Unit 前半
+console.log(textB.charCodeAt(1).toString(16)) // de22 <= UTF-16 Code Unit 後半
 
+// length は Code Unit 単位で動作するので、
+// サロゲートペアな範囲の文字列の場合だと、文字数を間違いやすいかも
 // これらは 2 になる例
 console.log(textB.length)
 console.log("🍺".length) // D83C DF7A
