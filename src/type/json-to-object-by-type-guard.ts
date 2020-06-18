@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// ↑JSON.parse の戻りの型が any なのでしょうがない？
+
 // JSON文字列からオブジェクトにする時の安全な取り扱い
 
 interface Fruit {
@@ -11,11 +14,11 @@ interface Vegetable {
 }
 
 // 自分達で定義する Type Guard 用関数
-const isFruit = (item: {}): item is Fruit => {
+const isFruit = (item: any): item is Fruit => {
   return "name" in item && "isSweet" in item
 }
 
-const isVegetable = (item: {}): item is Vegetable => {
+const isVegetable = (item: any): item is Vegetable => {
   return "name" in item && "isDelicious" in item
 }
 

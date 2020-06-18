@@ -1,5 +1,6 @@
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/prefer-as-const */
 
 {
   // 変数 apple は右辺の値からの型推論で string 型になる
