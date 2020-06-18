@@ -1,3 +1,5 @@
+# https://help.github.com/ja/actions/language-and-framework-guides/github-actions-for-javascript-and-typescript
+
 name: Lint
 
 on:
@@ -15,4 +17,5 @@ jobs:
         node-version: '12.14.0'
     - run: |
           yarn install
-          yarn lint
+          yarn run lint
+          yarn run build
