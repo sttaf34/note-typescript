@@ -1,6 +1,8 @@
 // https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 // https://qiita.com/ryokkkke/items/390647a7c26933940470
-// https://qiita.com/alfas/items/539ade65926deb530e0e
+//
+// デフォルト値が表になっている
+// https://www.typescriptlang.org/docs/handbook/compiler-options.html
 {
   "compilerOptions": {
     "module": "commonjs",     // JSへの変換時にどのような規格でexportするか
