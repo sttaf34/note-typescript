@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+
 // https://typescript-jp.gitbook.io/deep-dive/recap/truthy
 
 const logTrueOrFalse = (value: string | number | object): void => {

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+
 const getObjectFromJsonString = (jsonString: string): {} => {
   try {
     // JSON.parseが例外を起こす可能性があることは、F12で飛んだ先には書いてない

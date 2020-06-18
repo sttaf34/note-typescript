@@ -5,6 +5,7 @@
   "description": "description",
   "scripts": {
     "lint": "eslint --ext .ts src/",
+    "build": "tsc -p .",
     "test": "jest",
     "db": "json-server --watch assets/db.json --port 23306",
     "pre-commit": "jest"

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+
 // 一番外側が配列なJSON文字列をオブジェクトにする時の安全な取り扱い
 // type-guard-nullalbe-array.ts と同じような話だった
 interface Fruit {
