@@ -13,8 +13,11 @@ const logTrueOrFalse = (value: string | number | object): void => {
   }
 }
 
+// false
 logTrueOrFalse("")
 logTrueOrFalse(0)
+
+// true
 logTrueOrFalse([])
 logTrueOrFalse({})
 

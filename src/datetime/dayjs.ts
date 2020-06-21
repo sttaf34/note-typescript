@@ -20,3 +20,7 @@ const dates = Array.from({ length: 7 }).map((_, index) => {
   return begin.add(index, "day").format("YYYY-MM-DD")
 })
 console.log(dates)
+
+// 文字列から時刻オブジェクト化してフォーマットで文字列取得
+const datetime = dayjs("2020-06-25 04:00:58")
+console.log(datetime.format("YYYY-MM-DD"))
