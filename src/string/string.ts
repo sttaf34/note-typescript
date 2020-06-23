@@ -5,11 +5,10 @@
   console.log(textB)
 }
 
-// 含むの判定
+// 文字列からインデックスで一文字取得
 {
   const textA = "pineapple"
-  const result: boolean = textA.includes("apple")
-  console.log(result)
+  console.log(textA[2])
 }
 
 // 開始文字列と終了文字列を指定してその前後を抜き出す
@@ -21,12 +20,6 @@
   const secondHalf = html.slice(end, Number.POSITIVE_INFINITY)
   console.log(firstHalf)
   console.log(secondHalf)
-}
-
-// 文字列からインデックスで一文字取得
-{
-  const textA = "pineapple"
-  console.log(textA[2])
 }
 
 // 検索して個数を数える
