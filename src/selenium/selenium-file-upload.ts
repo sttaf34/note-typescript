@@ -1,4 +1,4 @@
-import { Capabilities, Builder } from "selenium-webdriver"
+import { Builder } from "selenium-webdriver"
 import fetch from "node-fetch"
 import * as dayjs from "dayjs"
 import { createWriteStream } from "fs"
@@ -10,8 +10,7 @@ import { expandTilde, sleep } from "../useful-functions"
 
 // ローカルのファイルをセットする場合
 const mainA = async (): Promise<void> => {
-  const capabilities = Capabilities.chrome()
-  const driver = await new Builder().withCapabilities(capabilities).build()
+  const driver = new Builder().forBrowser("chrome").build()
   await driver.get("http://localhost:5000/input-for-selenium")
 
   // 人間がダイアログを開いてファイル選択するのと同様の動作になる
@@ -31,8 +30,7 @@ const mainB = async (): Promise<void> => {
   // ストリームの処理終了時の処理
   stream.on("finish", async () => {
     console.log("finish")
-    const capabilities = Capabilities.chrome()
-    const driver = await new Builder().withCapabilities(capabilities).build()
+    const driver = new Builder().forBrowser("chrome").build()
     await driver.get("http://localhost:5000/input-for-selenium")
 
     const input = await driver.findElement({ xpath: "//input[@name='file']" })

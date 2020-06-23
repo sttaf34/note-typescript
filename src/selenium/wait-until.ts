@@ -1,11 +1,10 @@
-import { Capabilities, Builder, WebDriver, until } from "selenium-webdriver"
+import { Builder, WebDriver, until } from "selenium-webdriver"
 
 class Driver {
-  private driver!: WebDriver
+  private driver: WebDriver
 
-  private setup = async (): Promise<void> => {
-    const capabilities = Capabilities.chrome()
-    this.driver = await new Builder().withCapabilities(capabilities).build()
+  public constructor() {
+    this.driver = new Builder().forBrowser("chrome").build()
   }
 
   private doSomethingOnLocalhost = async (): Promise<void> => {
@@ -26,7 +25,6 @@ class Driver {
   }
 
   public main = async (): Promise<void> => {
-    await this.setup()
     await this.doSomethingOnLocalhost()
   }
 }

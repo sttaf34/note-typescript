@@ -1,13 +1,11 @@
-import { Capabilities, Builder } from "selenium-webdriver"
+import { Builder } from "selenium-webdriver"
 
 import { sleep } from "../useful-functions"
 
 // フォーム等の書いてあるファイルをサーバ上で見られるようにしといて・・・
 // serve ~/Projects/note/htmlcss/input
 const main = async (): Promise<void> => {
-  const capabilities = Capabilities.chrome()
-  const driver = await new Builder().withCapabilities(capabilities).build()
-  await driver.get("http://localhost:5000/input-for-selenium")
+  const driver = new Builder().forBrowser("chrome").build()
 
   // <iframe> の中を見るように切り替えて・・・
   const xpath = "//iframe[@id='iframe']"

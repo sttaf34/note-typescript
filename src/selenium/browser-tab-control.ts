@@ -1,16 +1,15 @@
 /* eslint-disable no-await-in-loop */
 /* eslint-disable no-restricted-syntax */
 
-import { Capabilities, Builder, WebDriver } from "selenium-webdriver"
+import { Builder, WebDriver } from "selenium-webdriver"
 
 import { sleep } from "../useful-functions"
 
 class Driver {
-  private driver!: WebDriver
+  private driver: WebDriver
 
-  private setup = async (): Promise<void> => {
-    const capabilities = Capabilities.chrome()
-    this.driver = await new Builder().withCapabilities(capabilities).build()
+  public constructor() {
+    this.driver = new Builder().forBrowser("chrome").build()
   }
 
   private experimentA = async (): Promise<void> => {
@@ -79,7 +78,6 @@ class Driver {
   }
 
   public main = async (): Promise<void> => {
-    await this.setup()
     // await this.experimentA()
     // await this.experimentB()
     await this.experimentC()

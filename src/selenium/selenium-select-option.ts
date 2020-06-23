@@ -1,12 +1,11 @@
-import { Capabilities, Builder } from "selenium-webdriver"
+import { Builder } from "selenium-webdriver"
 
 import { sleep } from "../useful-functions"
 
 // フォームの書いてあるファイルをサーバ上で見られるようにしといて・・・
 // serve ~/Projects/note/htmlcss/input
 const main = async (): Promise<void> => {
-  const capabilities = Capabilities.chrome()
-  const driver = await new Builder().withCapabilities(capabilities).build()
+  const driver = new Builder().forBrowser("chrome").build()
   await driver.get("http://localhost:5000/input-for-selenium")
 
   // TS, JS だと <select><option> を処理する専用のクラスは無いっぽい
