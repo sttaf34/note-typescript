@@ -1,6 +1,13 @@
 // 0 以上 1 未満のランダムな小数
 console.log(Math.random())
 
+// 範囲を指定したランダムな小数
+// developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+const getRandomArbitrary = (min: number, max: number): number => {
+  return Math.random() * (max - min) + min
+}
+console.log(getRandomArbitrary(0.8, 1.3))
+
 // Math.floor -> 引数の数以下の最大の整数を返す
 console.log(Math.floor(99.8)) // 99
 
