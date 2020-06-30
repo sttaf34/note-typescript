@@ -40,4 +40,13 @@
   console.log(`>> -> ${result.toString(2)}`) // ログだと先頭の0が省略される
 }
 
+//
+{
+  const result: number = 0b0001 & 0b0010
+  console.log(result) // 0
+  console.log(0b0001 & 0b0011) // 0b0001 => 1
+  console.log(0b0010 & 0b0011) // 0b0010 => 2
+  console.log(0b1000 & 0b1000) // 0b1000 => 8
+}
+
 export {}

@@ -12,9 +12,18 @@ type BeefBowl = {
 }
 
 const logStatus = (beefBowl: BeefBowl): void => {
-  if (beefBowl.status & Status.Quick) {
+  // 例
+  // 00000001 & 00000001 => 00000001 => 1
+  // (引き数)   (Quick)
+  //
+  // 00000100 & 00000001 => 00000000 => 0
+  // (引き数)   (Quick)
+
+  const result = beefBowl.status & Status.Quick
+  if (result) {
     console.log("速い！")
   }
+
   if (beefBowl.status & Status.Cheap) {
     console.log("安い！")
   }
@@ -27,23 +36,23 @@ const logStatus = (beefBowl: BeefBowl): void => {
   const beefBowlA = {
     status: Status.None,
   }
-  console.log("A")
+  console.log("牛丼チェーンA")
   logStatus(beefBowlA)
 }
 
 {
-  // 00000010 と 00000100 のビット毎の論理和 => 00000110
+  // 00000010 と 00000100 のビット毎の論理和(OR) => 00000110
   const beefBowlB = {
     status: Status.Cheap | Status.Tasty,
   }
-  console.log("B")
+  console.log("牛丼チェーンB")
   logStatus(beefBowlB)
 }
 
 {
   const beefBowlC = {
-    status: Status.None,
+    status: Status.Quick | Status.Cheap | Status.Tasty,
   }
-  console.log("C")
+  console.log("牛丼チェーンC")
   logStatus(beefBowlC)
 }

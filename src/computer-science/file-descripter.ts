@@ -1,5 +1,5 @@
 import * as fs from "fs"
-import { expandTilde, sleep } from "./useful-functions"
+import { expandTilde, sleep } from "../useful-functions"
 
 // すべてのプロセスが持つべき3つのファイルディスクリプタ
 // 0 -> 標準入力
