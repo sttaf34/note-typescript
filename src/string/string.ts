@@ -11,6 +11,12 @@
   console.log(textA[2])
 }
 
+// 文字列の掛け算
+{
+  const text = "あ"
+  console.log(text.repeat(30))
+}
+
 // 開始文字列と終了文字列を指定してその前後を抜き出す
 {
   const html = "<html><body></body></html>"
