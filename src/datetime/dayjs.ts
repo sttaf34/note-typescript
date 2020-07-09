@@ -14,12 +14,34 @@ console.log(now.format("YYYY-MM-DD HH:mm:ss"))
 console.log(now.subtract(1, "day")) // 1日過去
 console.log(now.add(1, "minute")) // 1分未来
 
-// ある日からある日数分の配列を取得
-const begin = now.subtract(1, "week")
-const dates = Array.from({ length: 7 }).map((_, index) => {
-  return begin.add(index, "day").format("YYYY-MM-DD")
-})
-console.log(dates)
+{
+  // 差分
+  const dateA = now.subtract(1, "day")
+  const dateB = now.add(1, "week")
+  const diff: number = dateB.diff(dateA, "day")
+  console.log(diff)
+}
+
+{
+  // ある日からある日数分の配列を取得
+  const begin = now.subtract(1, "week")
+  const dates = Array.from({ length: 7 }).map((_, index) => {
+    return begin.add(index, "day").format("YYYY-MM-DD")
+  })
+  console.log(dates)
+}
+
+{
+  // ある日からある日までの配列を取得
+  const begin = now.subtract(1, "week")
+  const end = now.add(5, "day")
+  const diff = end.diff(begin, "day") + 1
+  const dates = Array.from({ length: diff }).map((_, index) => {
+    return begin.add(index, "day").format("YYYY-MM-DD")
+  })
+  console.log(begin.format("YYYY-MM-DD"), end.format("YYYY-MM-DD"))
+  console.log(dates)
+}
 
 // 文字列から時刻オブジェクト化してフォーマットで文字列取得
 const datetime = dayjs("2020-06-25 04:00:58")
