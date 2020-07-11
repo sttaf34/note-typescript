@@ -14,6 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "apollo-server": "^2.15.1",
     "axios": "^0.19.2",
     "basic-auth": "^2.0.1",
     "bcrypt": "^5.0.0",
@@ -25,6 +26,7 @@
     "dayjs": "^1.8.28",
     "deep-equal": "^2.0.3",
     "dotenv": "^8.2.0",
+    "graphql": "^15.3.0",
     "json-server": "^0.16.1",
     "moment": "^2.26.0",
     "moment-timezone": "^0.5.28",
