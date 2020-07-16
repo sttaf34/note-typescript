@@ -35,6 +35,7 @@
 {
   const textA = "abcXXXdef"
   const textB = textA.replace(/X/g, (matched) => {
+    console.log(matched) // マッチ都度出力される
     return matched.toLowerCase()
   })
   console.log(textB)

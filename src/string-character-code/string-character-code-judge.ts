@@ -19,8 +19,8 @@ export const isHiragana = (text: string): boolean => {
 }
 
 // コードポイントを使ってのカタカナ判定
-// 0x30A0(12448) - 0x30FF(12543) がひらがなの範囲
-// true => text が全てひらがな
+// 0x30A0(12448) - 0x30FF(12543) がカタカナの範囲
+// true => text が全てカタカナ
 export const isKatakana = (text: string): boolean => {
   const splittedCharsByCodePoint = Array.from(text)
   for (const char of splittedCharsByCodePoint) {
