@@ -15,6 +15,12 @@ console.log(Math.floor(99.8)) // 99
 const randomNumber = Math.floor(Math.random() * 100)
 console.log(randomNumber)
 
+// 配列の要素をランダムで取得
+const rooms = ["roomA", "roomB", "roomC"]
+const randomIndex = Math.floor(Math.random() * rooms.length)
+const randomRoom = rooms[randomIndex]
+console.log(randomRoom)
+
 const randomNumbers = (n: number): number[] => {
   // n個の整数の配列を用意
   const numbers = Array.from({ length: n }, (_, index) => index + 1)
