@@ -7,7 +7,7 @@
 import * as parse from "csv-parse/lib/sync"
 
 import { readFileSync } from "fs"
-import { expandTilde } from "./useful-functions"
+import { expandTilde } from "../useful-functions"
 
 const aPath = "~/Projects/note-typescript/assets/sample.csv"
 const data = readFileSync(expandTilde(aPath))

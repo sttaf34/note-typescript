@@ -1,7 +1,7 @@
 import * as parse from "csv-parse"
 
 import { createReadStream } from "fs"
-import { expandTilde } from "./useful-functions"
+import { expandTilde } from "../useful-functions"
 
 // ファイルから一定量読みつつ、読んだ分から CSV のパーサーに渡している形
 {
