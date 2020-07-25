@@ -1,38 +1,38 @@
 module.exports = {
-  "env": {
-    "es6": true,
-    "jest": true
+  // https://eslint.org/docs/user-guide/configuring#specifying-environments
+  env: {
+    node: true,
+    jest: true,
   },
-  "extends": [
+
+  extends: [
     "airbnb-base",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
     "prettier",
     "prettier/@typescript-eslint",
   ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json"
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json",
   },
-  "plugins": ["@typescript-eslint", "prettier"],
-  "settings": {
+  plugins: ["@typescript-eslint", "prettier"],
+  settings: {
     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".ts"]
-      }
+      node: {
+        extensions: [".js", ".ts"],
+      },
     },
   },
-  "rules": {
+  rules: {
     "no-console": "off",
-    "prettier/prettier": ["error", { "semi": false } ],
+    "prettier/prettier": ["error", { semi: false }],
 
     // https://stackoverflow.com/questions/59265981/typescript-eslint-missing-file-extension-ts-import-extensions
-    "import/extensions": [
-      "error", "ignorePackages", { "ts": "never" }
-    ],
+    "import/extensions": ["error", "ignorePackages", { ts: "never" }],
 
     // switch 内での列挙漏れチェック
     "@typescript-eslint/switch-exhaustiveness-check": "error",
     "default-case": "off",
-  }
+  },
 }
