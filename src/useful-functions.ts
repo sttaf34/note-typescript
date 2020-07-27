@@ -1,4 +1,5 @@
 import { join } from "path"
+import * as moment from "moment"
 
 export const expandTilde = (filePath: string): string => {
   if (filePath.length === 0 || process.env.HOME == null) {
@@ -17,4 +18,15 @@ export const sleep = async (milliseconds: number): Promise<void> => {
       resolve()
     }, milliseconds)
   })
+}
+
+export const logExecutionTime = (doSomething: () => void): void => {
+  const startMillisecond = moment().valueOf()
+  console.log("executing...")
+
+  doSomething()
+
+  const endMillisecond = moment().valueOf()
+  const diffMillisecond = endMillisecond - startMillisecond
+  console.log(`${diffMillisecond} millisecond`)
 }

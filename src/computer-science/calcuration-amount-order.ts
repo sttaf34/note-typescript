@@ -1,4 +1,4 @@
-import * as moment from "moment"
+import { logExecutionTime } from "../useful-functions"
 
 // 詳しい -> https://qiita.com/drken/items/872ebc3a2b5caaa4a0d0
 
@@ -14,17 +14,6 @@ const randomNumbers = (n: number): number[] => {
   return numbers
 }
 
-const start = (): number => {
-  const millisecond = moment().valueOf()
-  console.log("executing...")
-  return millisecond
-}
-
-const end = (startMillisecond: number): void => {
-  const millisecond = moment().valueOf()
-  console.log(`${millisecond - startMillisecond} millisecond`)
-}
-
 // 線形探索（リニアサーチ）の計算量は O(n)
 const execLinearSearch = (numbers: number[]): void => {
   const target = -3
@@ -36,15 +25,9 @@ const execLinearSearch = (numbers: number[]): void => {
 }
 
 const main = (): void => {
-  const n = 10000000
-
-  const startA = start()
-  const numbers = randomNumbers(n)
-  end(startA)
-
-  const startB = start()
-  execLinearSearch(numbers)
-  end(startB)
+  const numbers = randomNumbers(10000000)
+  const doSomething = () => execLinearSearch(numbers)
+  logExecutionTime(doSomething)
 }
 
 main()
