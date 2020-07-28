@@ -11,9 +11,7 @@
       "preLaunchTask": "tsc",
       "program": "${file}",
       "smartStep": true,
-      "outFiles": [
-        "${workspaceRoot}/build/**/*.js"
-      ]
+      "outFiles": ["${workspaceRoot}/build/**/*.js"]
     }
   ]
 }

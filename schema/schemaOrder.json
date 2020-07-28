@@ -1,18 +1,14 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "additionalProperties": false,
-    "properties": {
-        "id": {
-            "type": "string"
-        },
-        "price": {
-            "type": "number"
-        }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
     },
-    "required": [
-        "id",
-        "price"
-    ],
-    "type": "object"
+    "price": {
+      "type": "number"
+    }
+  },
+  "required": ["id", "price"],
+  "type": "object"
 }
-

@@ -9,7 +9,7 @@
       // Windows で Selenium 関連を動くようにする対応
       "windows": {
         "command": "source ~/.bashrc && yarn ts-node '${file}'"
-      },
+      }
     },
     {
       "label": "ts-node-dev-this-file",
@@ -22,15 +22,13 @@
       "command": "yarn jest '${file}'",
       "windows": {
         "command": "echo '現状動かない'"
-      },
+      }
     },
     {
       "label": "tsc",
       "type": "shell",
       "command": "yarn tsc -p .",
-      "problemMatcher": [
-        "$tsc"
-      ]
+      "problemMatcher": ["$tsc"]
     }
   ]
 }

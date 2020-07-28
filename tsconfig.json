@@ -6,12 +6,12 @@
 // https://www.typescriptlang.org/docs/handbook/compiler-options.html
 {
   "compilerOptions": {
-    "module": "commonjs",     // JSへの変換時にどのような規格でexportするか
-    "target": "ES2015",       // JSへの変換時にどのバージョンにするか
-    "sourceMap": true,        // デバッガ等で利用する.mapを出力するか否か
-    "outDir": "./build/",     // JSへの変換したファイルの出力先
-    "strict": true,           // 幾つかのオプションをtrueにする、厳しくなる
-    "skipLibCheck": true,     // *.d.ts の型チェックをスキップ
+    "module": "commonjs", // JSへの変換時にどのような規格でexportするか
+    "target": "ES2015", // JSへの変換時にどのバージョンにするか
+    "sourceMap": true, // デバッガ等で利用する.mapを出力するか否か
+    "outDir": "./build/", // JSへの変換したファイルの出力先
+    "strict": true, // 幾つかのオプションをtrueにする、厳しくなる
+    "skipLibCheck": true, // *.d.ts の型チェックをスキップ
 
     // ファイル名の大文字小文字の違いをエラーにする
     "forceConsistentCasingInFileNames": true,
@@ -21,14 +21,8 @@
   },
 
   // 変換対象ファイル指定
-  "include": [
-    "**/src/**/*.ts",
-    "**/__tests__/**/*.ts",
-    "**/.eslintrc.js"
-  ],
+  "include": ["**/src/**/*.ts", "**/__tests__/**/*.ts", "**/.eslintrc.js"],
 
   // 変換対象ファイル除外指定
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
