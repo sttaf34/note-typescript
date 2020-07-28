@@ -1,3 +1,7 @@
+// ↑⌘Ｐ => Toggle Regex Preview In Side-By-Side Editors
+"".match(/in/)
+"".match(/in/g)
+
 {
   const text = "abcdefghijklmnopqrstuvwxyzabc"
   const result = text.match(/abc/)
