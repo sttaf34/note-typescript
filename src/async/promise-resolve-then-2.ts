@@ -1,29 +1,30 @@
 // https://azu.github.io/promises-book/#introduction
 
-// Promiseを返す関数、実行すると即座に成功する
-const simplePromise = (): Promise<void> => {
-  return new Promise((resolve: () => void): void => {
-    resolve()
-  })
-}
-console.log("Hello...")
-simplePromise().then((): void => {
-  console.log("Simple!")
-})
-
-// Promiseを返す関数を使った形
+// 2秒経過するプロミス
 const samplePromiseA = (): Promise<void> => {
-  return new Promise((resolve: () => void): void => {
-    // 通信して2秒後に成功となったというイメージ
+  return new Promise((resolve): void => {
     setTimeout((): void => {
       resolve()
     }, 2000)
   })
 }
-console.log("Hello...")
-samplePromiseA().then((): void => {
-  console.log("Sample!")
-})
+
+const doSomethingA = (): void => {
+  samplePromiseA().then(() => {
+    console.log("Promise")
+  })
+  console.log("Hello")
+}
+// "Hello" => 時間経過 => "Promise"
+doSomethingA()
+
+const doSomethingB = async (): Promise<void> => {
+  console.log("Hey")
+  await samplePromiseA()
+  console.log("Hello")
+}
+// "Hey" => 時間経過 => "Hello"
+doSomethingB()
 
 // Promise で何か値が返ってくる場合の書き方
 const samplePromiseB = (): Promise<number> => {
@@ -36,8 +37,7 @@ samplePromiseB().then((aNumber: number): void => {
   console.log(aNumber)
 })
 
-// Promise で何か値が返ってくる場合の書き方で、
-// resolve のところの型省略して大丈夫そう
+// 値が返ってくる場合の書き方で resolve の型を省略した形
 const samplePromiseC = (): Promise<number> => {
   return new Promise((resolve): void => {
     resolve(2000)

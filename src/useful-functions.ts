@@ -30,3 +30,15 @@ export const logExecutionTime = (doSomething: () => void): void => {
   const diffMillisecond = endMillisecond - startMillisecond
   console.log(`${diffMillisecond} millisecond`)
 }
+
+// 39 => 1秒程度
+// 43 => 5秒程度
+export const fibonacci = (aNumber: number): number => {
+  if (aNumber === 0) {
+    return 0
+  }
+  if (aNumber === 1) {
+    return 1
+  }
+  return fibonacci(aNumber - 1) + fibonacci(aNumber - 2)
+}
