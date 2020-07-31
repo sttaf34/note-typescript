@@ -1,3 +1,5 @@
+/* eslint-disable camelcase */
+
 import axios, { AxiosResponse } from "axios"
 import fetch, { Response } from "node-fetch"
 
@@ -27,3 +29,18 @@ const axiosSampleB = async (): Promise<void> => {
   console.log(data[0])
 }
 axiosSampleB()
+
+type QiitaTagData = {
+  followers_count: number
+  icon_url: string
+  id: string
+  items_count: number
+}
+
+// 型を渡せるようになってる
+const axiosSampleC = async (): Promise<void> => {
+  const response = await axios.get<QiitaTagData[]>(QIITA_API_URL_TAG)
+  const { data: qiitaTagDataArray } = response
+  console.log(qiitaTagDataArray[0])
+}
+axiosSampleC()
