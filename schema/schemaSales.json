@@ -9,6 +9,9 @@
       "type": "number"
     }
   },
-  "required": ["id", "price"],
+  "required": [
+    "id",
+    "price"
+  ],
   "type": "object"
 }

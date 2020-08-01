@@ -9,21 +9,18 @@ import * as Ajv from "ajv"
 // JSON Schema から validate 関数を生成するライブラリ
 
 // 生成した JSON Schema なファイルを import してる
-import * as schema from "../../schema/schemaOrder.json"
+import * as schema from "../../schema/schemaSales.json"
 
-type Sales = {
-  id: string
-  price: number
-}
+import { Sales } from "./types"
 
 const validate = (object: unknown): void => {
   const ajv = new Ajv()
-  const validateOrder = ajv.compile(schema)
-  if (validateOrder(object)) {
+  const validateSales = ajv.compile(schema)
+  if (validateSales(object)) {
     const sales = object as Sales
     console.log(sales.id, sales.price)
   } else {
-    console.log(validateOrder.errors)
+    console.log(validateSales.errors)
   }
 }
 
