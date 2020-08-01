@@ -8,7 +8,8 @@
     "build": "tsc -p .",
     "test": "jest",
     "db": "json-server --watch assets/db.json --port 23306",
-    "schema-sales": "typescript-json-schema --required true --noExtraProps true ./tsconfig.json Sales -o schema/schemaSales.json"
+    "schema-sales": "typescript-json-schema --required true --noExtraProps true ./tsconfig.json Sales -o schema/schemaSales.json",
+    "schema-magazine": "typescript-json-schema --required true --noExtraProps true ./tsconfig.json Magazine -o schema/schemaMagazine.json"
   },
   "keywords": [],
   "author": "",
