@@ -43,6 +43,15 @@ console.log(now.add(1, "minute")) // 1分未来
   console.log(dates)
 }
 
-// 文字列から時刻オブジェクト化してフォーマットで文字列取得
-const datetime = dayjs("2020-06-25 04:00:58")
-console.log(datetime.format("YYYY-MM-DD"))
+{
+  // 文字列から時刻オブジェクト化してフォーマットで文字列取得
+  const datetime = dayjs("2020-06-25 04:00:58")
+  console.log(datetime.format("YYYY-MM-DD"))
+}
+
+{
+  // 標準の Date オブジェクトに変換
+  const datetime = dayjs("2020-06-25 04:00:58")
+  const nativeDate = datetime.toDate()
+  console.log(nativeDate)
+}
