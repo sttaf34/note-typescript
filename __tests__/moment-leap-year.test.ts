@@ -1,6 +1,6 @@
-import isLeapYear from "../src/datetime/moment-leap-year"
+import { isLeapYear } from "../src/datetime/moment-leap-year"
 
-test("function isLeapYear", (): void => {
+test("isLeapYear", (): void => {
   expect(isLeapYear(2000.2)).toBe(false)
   expect(isLeapYear(Number.NaN)).toBe(false)
   expect(isLeapYear(Number.NEGATIVE_INFINITY)).toBe(false)
