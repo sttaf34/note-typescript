@@ -6,10 +6,10 @@ test("isEmpty", (): void => {
   expect(validate.isEmpty("1")).toBe(false)
 })
 
-test("isNumberStringAll", (): void => {
-  expect(validate.isNumberStringAll("123789")).toBe(true)
-  expect(validate.isNumberStringAll("")).toBe(false)
-  expect(validate.isNumberStringAll("abc")).toBe(false)
+test("isOnlyNumberString", (): void => {
+  expect(validate.isOnlyNumberString("123789")).toBe(true)
+  expect(validate.isOnlyNumberString("")).toBe(false)
+  expect(validate.isOnlyNumberString("abc")).toBe(false)
 })
 
 test("isBeginZero", (): void => {
@@ -29,10 +29,12 @@ test("isPositiveIntegerString", (): void => {
   expect(validate.isPositiveIntegerString("9,800")).toBe(false)
 })
 
-test("isOver", (): void => {
-  expect(validate.isOver("abc", 3)).toBe(true)
-  expect(validate.isOver("", 0)).toBe(true)
-  expect(validate.isOver("12345", 3)).toBe(true)
-  expect(validate.isOver("ab", 3)).toBe(false)
-  expect(validate.isOver("", 3)).toBe(false)
+test("isOverCharLength", (): void => {
+  expect(validate.isOverCharLength("abc", 3)).toBe(true)
+  expect(validate.isOverCharLength("", 0)).toBe(true)
+  expect(validate.isOverCharLength("🍎🍊🍣", 3)).toBe(true)
+  expect(validate.isOverCharLength("12345", 3)).toBe(true)
+  expect(validate.isOverCharLength("ab", 3)).toBe(false)
+  expect(validate.isOverCharLength("", 3)).toBe(false)
+  expect(validate.isOverCharLength("🍎🍊🍣", 4)).toBe(false)
 })
