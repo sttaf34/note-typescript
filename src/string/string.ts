@@ -16,21 +16,3 @@
   const text = "あ"
   console.log(text.repeat(30))
 }
-
-// 開始文字列と終了文字列を指定してその前後を抜き出す
-{
-  const html = "<html><body></body></html>"
-  const start = html.indexOf("<body>")
-  const end = html.indexOf("</body>", start) + "</body>".length
-  const firstHalf = html.slice(0, start)
-  const secondHalf = html.slice(end, Number.POSITIVE_INFINITY)
-  console.log(firstHalf)
-  console.log(secondHalf)
-}
-
-// 検索して個数を数える
-{
-  const text = "pineapple apple grape orange"
-  const array: RegExpMatchArray = text.match(/apple/g) || []
-  console.log(array.length)
-}
