@@ -11,7 +11,7 @@ import * as Ajv from "ajv"
 // 生成した JSON Schema なファイルを import してる
 import * as schema from "../../schema/schemaSales.json"
 
-import { Sales } from "./types"
+import { Sales } from "../type-guard/types"
 
 const validate = (object: unknown): void => {
   const ajv = new Ajv()

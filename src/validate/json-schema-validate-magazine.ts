@@ -4,7 +4,7 @@ import * as Ajv from "ajv"
 import * as schema from "../../schema/schemaMagazine.json"
 
 // 階層構造でも大丈夫だった
-import { Magazine } from "./types"
+import { Magazine } from "../type-guard/types"
 
 const validate = (object: unknown): void => {
   const ajv = new Ajv()

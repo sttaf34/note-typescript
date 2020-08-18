@@ -1,4 +1,4 @@
-import * as validate from "../src/validate"
+import * as validate from "../src/validate/validate-sample"
 
 test("isEmpty", (): void => {
   expect(validate.isEmpty("")).toBe(true)
