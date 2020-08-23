@@ -10,6 +10,11 @@ const user = { id: 1, name: "sttaf34" }
   const { id: userId, name: userName } = user
   console.log(userId, userName)
 }
+{
+  // 型を明示したいとき
+  const { id }: { id: number } = user
+  console.log(id)
+}
 
 // 配列の分割代入
 const numbers = [1, 2, 3]
