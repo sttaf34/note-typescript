@@ -18,3 +18,13 @@ export const isOverCharLength = (value: string, length: number): boolean => {
   const codePoints = Array.from(value)
   return codePoints.length >= length
 }
+
+export const isValidArrayIndex = <T>(array: T[], index: number): boolean => {
+  if (Number.isInteger(index) === false) {
+    return false
+  }
+  if (index < 0 || array.length <= index) {
+    return false
+  }
+  return true
+}

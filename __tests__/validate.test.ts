@@ -38,3 +38,17 @@ test("isOverCharLength", (): void => {
   expect(validate.isOverCharLength("", 3)).toBe(false)
   expect(validate.isOverCharLength("🍎🍊🍣", 4)).toBe(false)
 })
+
+test("isValidArrayIndex", (): void => {
+  const fruits = ["apple", "banana", "coconut"]
+  expect(validate.isValidArrayIndex(fruits, -1)).toBe(false)
+  expect(validate.isValidArrayIndex(fruits, 0)).toBe(true)
+  expect(validate.isValidArrayIndex(fruits, 2)).toBe(true)
+  expect(validate.isValidArrayIndex(fruits, 3)).toBe(false)
+
+  expect(validate.isValidArrayIndex(fruits, 0.0)).toBe(true)
+  expect(validate.isValidArrayIndex(fruits, Number.NaN)).toBe(false)
+
+  expect(validate.isValidArrayIndex([], -1)).toBe(false)
+  expect(validate.isValidArrayIndex([], 0)).toBe(false)
+})
