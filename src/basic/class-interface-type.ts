@@ -25,13 +25,4 @@ class User implements UserInterface {
 const user = new User("Bob", 32)
 console.log(user.getName())
 
-{
-  type Book = {
-    title: string
-    price: number
-  }
-  const book: Book = { title: "すごい本", price: 1980 }
-  console.log(book)
-}
-
 export {}
