@@ -20,4 +20,7 @@ console.log(keyA)
 mapA.delete("keyA")
 console.log(mapA)
 
+// 有無チェック
+console.log(mapA.has("keyB"), mapA.has("keyC"))
+
 export {}
