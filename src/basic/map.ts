@@ -16,6 +16,10 @@ const keys: IterableIterator<string> = mapA.keys()
 const keyA = Array.from(keys).find((key) => key === "keyA")
 console.log(keyA)
 
+// 番目を特定
+const index = Array.from(mapA.keys()).findIndex((aKey) => aKey === "keyB")
+console.log("index =>", index)
+
 // キーで指定して削除
 mapA.delete("keyA")
 console.log(mapA)
