@@ -28,7 +28,7 @@ promiseB.then((response: string): void => {
 })
 
 // 失敗も起こりうる形
-const promiseC = new Promise(
+const promiseC: Promise<void> = new Promise(
   (resolve: () => void, reject: () => void): void => {
     setTimeout((): void => {
       return Math.random() >= 0.5 ? resolve() : reject()
