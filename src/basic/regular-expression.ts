@@ -1,6 +1,13 @@
 // ↑⌘Ｐ => Toggle Regex Preview In Side-By-Side Editors
-"".match(/in/)
+// 右側にサンプルの文字列が予め入力されたエディタが追加される
+// ⬇の正規表現のところにキャレットを持っていくと、右側がハイライトされる
+"".match(/800/)
 "".match(/in/g)
+"".match(/^https/m)
+"".match(/^https/gm)
+"".match(/t$/gm)
+
+console.log("    SELECT COUNT(id) AS count FROM workouts".match(/^ */gm))
 
 {
   const text = "abcdefghijklmnopqrstuvwxyzabc"
