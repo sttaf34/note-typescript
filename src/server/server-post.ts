@@ -14,9 +14,11 @@ const listener = (
     body += chunk
   })
   request.on("end", (): void => {
+    console.log("REQUEST HEADER")
     console.log(request.headers)
+    console.log("REQUEST BODY")
     console.log(body)
-    response.end("Hello POST Request.")
+    response.end("Hello POST Request.\n")
   })
 }
 
