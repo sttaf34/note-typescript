@@ -27,3 +27,6 @@ console.log(nullVariable == null) // true
 
 // variable == null でどちらもまとめてチェックできる
 // https://typescript-jp.gitbook.io/deep-dive/recap/null-undefined
+
+// 空文字列にではなくて文字列の "null" になる
+console.log(String(nullVariable))

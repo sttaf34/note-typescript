@@ -1,4 +1,6 @@
 {
+  // 配列の合計値を求める
+  // reduce の第二引数の initialValue がない場合の道中の値の推移
   const numbers = [1, 2, 3]
   const result: number = numbers.reduce(
     (previousValue, currentValue, currentIndex): number => {
@@ -17,7 +19,8 @@
 }
 
 {
-  // reduce の第二引数の initialValue がある場合
+  // 配列の合計値を求める
+  // reduce の第二引数の initialValue がある場合の道中の値の推移
   const numbers = [4, 5, 6]
   const result: number = numbers.reduce(
     (previousValue, currentValue): number => {
