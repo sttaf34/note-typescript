@@ -44,3 +44,29 @@ const axiosSampleC = async (): Promise<void> => {
   console.log(qiitaTagDataArray[0])
 }
 axiosSampleC()
+
+const axiosSampleD = async (): Promise<void> => {
+  // https://qiita.com/api/v2/tags?page=1&sort=count と同じ
+  const url = "https://qiita.com/api/v2/tags"
+  const response = await axios.get(url, {
+    params: {
+      page: 1,
+      sort: "count",
+    },
+  })
+  const { data } = response
+  console.log(data[0])
+}
+axiosSampleD()
+
+// HTTP ヘッダ付与
+const axiosSampleE = async (): Promise<void> => {
+  const response = await axios.get(QIITA_API_URL_TAG, {
+    headers: {
+      "Accept-Language": "en",
+    },
+  })
+  const { data, headers } = response
+  console.log(headers)
+}
+axiosSampleE()
