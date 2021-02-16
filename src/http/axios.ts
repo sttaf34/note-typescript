@@ -66,7 +66,7 @@ const axiosSampleE = async (): Promise<void> => {
       "Accept-Language": "en",
     },
   })
-  const { data, headers } = response
+  const { headers } = response
   console.log(headers)
 }
 axiosSampleE()
