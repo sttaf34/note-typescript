@@ -6,8 +6,9 @@ mapA.set("keyA", 777)
 mapA.set("keyB", 888)
 console.log(mapA.get("keyA"))
 
-// 反復
-mapA.forEach((key, value) => {
+// 反復・セットするときと引数の順番が異なる
+// https://stackoverflow.com/questions/33110709/
+mapA.forEach((value, key) => {
   console.log(`${key} => ${value}`)
 })
 
