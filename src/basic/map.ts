@@ -28,4 +28,16 @@ console.log(mapA)
 // 有無チェック
 console.log(mapA.has("keyB"), mapA.has("keyC"))
 
+// キーでソートしたいと思った場合
+const mapB = new Map<number, string>()
+mapB.set(3, "333")
+mapB.set(1, "111")
+mapB.set(5, "555")
+mapB.set(10, "1010")
+const sorted: [number, string][] = Array.from(mapB.entries()).sort((a, b) => {
+  return a[0] > b[0] ? 1 : -1
+})
+const newMap = new Map(sorted)
+console.log(newMap)
+
 export {}
