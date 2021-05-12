@@ -16,6 +16,11 @@
     // ファイル名の大文字小文字の違いをエラーにする
     "forceConsistentCasingInFileNames": true,
 
+    // "noUncheckedIndexedAccess": true だと
+    // const values = [1, 2]
+    // const value = values[2] // number | undefined で推論してくれる
+    "noUncheckedIndexedAccess": false,
+
     // schema*.json 読み込みに必要
     "resolveJsonModule": true
   },
